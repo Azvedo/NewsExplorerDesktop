@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Header.css";
+import Modal from "./Modal";
 
 export function Header() {
   
@@ -24,15 +25,7 @@ export function Header() {
       </header>
 
       {isModalVisible && (
-        <div className="modal-overlay">
-          <div className="modal-content">
-            <h2>Criar Notícia</h2>
-            <input type="text" placeholder="Título da notícia" />
-            <textarea placeholder="Conteúdo da notícia"></textarea>
-            <button onClick={toggleModal}>Fechar</button>
-            <button>Enviar</button>
-          </div>
-        </div>
+        <Modal toggleModal={toggleModal} />
       )};
     </>
   );
