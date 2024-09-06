@@ -5,7 +5,10 @@ import './NewsList.css';
 
 const NewsList = () => {
 
-  const client = createClient({space : "gft2mzhd30x8", accessToken : "9RF2BRJwt6gio9R9xF7J0KqdPeJGMeHkm17VqnyXo24" });
+  const client = createClient({
+    space : "gft2mzhd30x8", 
+    accessToken : "9RF2BRJwt6gio9R9xF7J0KqdPeJGMeHkm17VqnyXo24" 
+  });
 
   const [news, setNews] = useState([]);
 
@@ -13,7 +16,6 @@ const NewsList = () => {
     const fetchNews = async () => {
       try {
         await client.getEntries().then((entries) => {
-          console.log(entries)
           setNews(entries.items);
         })
 
@@ -30,7 +32,7 @@ const NewsList = () => {
       <h1>Notícias</h1>
       <div className='news'>
         {news.map((item) => (
-            <CardNews Key={item.sys.id} title={item.fields.title} img_url={item.fields.image.fields.file.url} description={item.fields.summary} author={item.fields.author} date={item.fields.cratedDate}/>
+            <CardNews key={item.sys.id} itemKey={item.sys.id} title={item.fields.title} img_url={item.fields.image.fields.file.url} description={item.fields.summary} author={item.fields.author} date={item.fields.createdDate}/>
           ))}
       </div>
     </div>

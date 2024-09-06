@@ -12,6 +12,7 @@
   "dependencies": {
     "axios": "^1.7.7",
     "contentful": "^10.15.0",
+    "contentful-management": "^11.33.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
