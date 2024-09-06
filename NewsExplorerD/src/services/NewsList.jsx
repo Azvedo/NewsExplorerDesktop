@@ -5,14 +5,15 @@ import './NewsList.css';
 
 const NewsList = () => {
 
-  const client = createClient({
-    space : "gft2mzhd30x8", 
-    accessToken : "9RF2BRJwt6gio9R9xF7J0KqdPeJGMeHkm17VqnyXo24" 
-  });
-
   const [news, setNews] = useState([]);
 
   useEffect(() => {
+
+    const client = createClient({
+      space : "gft2mzhd30x8", 
+      accessToken : "9RF2BRJwt6gio9R9xF7J0KqdPeJGMeHkm17VqnyXo24" 
+    });
+
     const fetchNews = async () => {
       try {
         await client.getEntries().then((entries) => {
@@ -25,7 +26,7 @@ const NewsList = () => {
     };
 
     fetchNews();
-  }, []);
+  }, [news]);
 
   return (
     <div className='main'>

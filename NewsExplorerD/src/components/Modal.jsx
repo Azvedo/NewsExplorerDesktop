@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react';
 import createNewsPost from '../services/CreateNews'; // Importa a função que lida com a API
+import './Modal.css';
 
 const Modal = ({ toggleModal }) => {
    const [title, setTitle] = useState('');
