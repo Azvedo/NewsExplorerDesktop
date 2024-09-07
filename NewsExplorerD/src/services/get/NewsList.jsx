@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { createClient } from 'contentful';
-import { CardNews } from '../components/CardNews';
+import { CardNews } from '../../components/cardNews/CardNews';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import './NewsList.css';
 
@@ -46,7 +46,7 @@ const NewsList = () => {
     };
 
     fetchNews();
-  }, [page]);
+  }, [page, news]);
 
   return (
     <div className='main'>

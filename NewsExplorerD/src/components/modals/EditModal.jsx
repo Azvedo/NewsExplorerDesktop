@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react';
-import updateNewsPost from '../services/UpdateNews'; // Função para atualizar o post na API
+import updateNewsPost from '../../services/put/UpdateNews'; // Função para atualizar o post na API
 import './Modal.css';
 
 const EditModal = ({ item, toggleModal }) => {

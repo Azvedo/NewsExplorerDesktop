@@ -1,5 +1,5 @@
 import { createClient } from 'contentful-management';
-import uploadImage from './UploadImage';
+import uploadImage from '../put/UploadImage';
 
 // Inicializando o cliente do Contentful
 const client = createClient({

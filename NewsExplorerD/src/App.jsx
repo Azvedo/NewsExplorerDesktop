@@ -1,5 +1,5 @@
-import { Header } from './components/Header'
-import NewsList from './services/NewsList'; // Import the NewsList component
+import { Header } from './components/header/Header'
+import NewsList from './services/get/NewsList'; // Import the NewsList component
 
 function App() {
   return (

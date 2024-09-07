@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import './CardNews.css';
-import deleteNewsPost from '../services/DeleteNews';
-import EditModal from "./EditModal";
+import deleteNewsPost from '../../services/delete/DeleteNews';
+import EditModal from "../modals/EditModal";
 
 
 export function CardNews({itemKey ,title, description, img_url, author, date}) {

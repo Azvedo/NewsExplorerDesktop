@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Header.css";
-import Modal from "./Modal";
+import Modal from "../modals/Modal";
 
 export function Header() {
   
@@ -9,7 +9,6 @@ export function Header() {
   const toggleModal = () => {
     setIsModalVisible(!isModalVisible);
   };
-  
   
   return (
     <>
