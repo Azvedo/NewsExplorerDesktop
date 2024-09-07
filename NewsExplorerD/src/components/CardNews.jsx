@@ -37,7 +37,6 @@ export function CardNews({itemKey ,title, description, img_url, author, date}) {
                         <button onClick={toggleModal} >Editar</button>
                         <button onClick={() => deleteNewsPost(itemKey)} >Deletar</button>
                     </div>
-                    
                 </div>
             </div>
             <div className="card_img">
@@ -51,7 +50,7 @@ export function CardNews({itemKey ,title, description, img_url, author, date}) {
 
             {isModalVisible && (
                 <EditModal item={item} toggleModal={toggleModal} />
-            )};
+            )}
         </div>
     )
 }

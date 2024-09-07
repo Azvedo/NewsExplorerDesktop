@@ -7,7 +7,7 @@ const Modal = ({ toggleModal }) => {
    const [title, setTitle] = useState('');
    const [image, setImage] = useState('');
    const [summary, setSummary] = useState('');
-   const [createdDate, setDate] = useState('');
+   const [createdDate, setcreatedDate] = useState('');
    const [author, setAuthor] = useState('');
    const [content, setContent] = useState('');
 
@@ -26,7 +26,7 @@ const Modal = ({ toggleModal }) => {
       setTitle('');
       setImage('');
       setSummary('');
-      setDate('');
+      setcreatedDate('');
       setAuthor('');
       setContent('');
   };
@@ -60,7 +60,7 @@ const Modal = ({ toggleModal }) => {
           type="date"
           placeholder="Data de criação"
           value={createdDate}
-          onChange={(e) => setDate(e.target.value)}
+          onChange={(e) => setcreatedDate(e.target.value)}
         />
 
         <input
