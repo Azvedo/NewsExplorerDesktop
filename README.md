@@ -47,9 +47,9 @@ Clone o repositório para sua máquina local:
 
 src/
 
-  ├── components/      # Componentes React
+    ├── components/      # Componentes React
   
-  ├── services/        # Serviços (requisições API, etc.)
+    ├── services/        # Serviços (requisições API, etc.)
 
 ├── App.jsx          # Componente principal
 
