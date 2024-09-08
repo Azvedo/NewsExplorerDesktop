@@ -46,8 +46,12 @@ Clone o repositório para sua máquina local:
 ### Estrutura de Pastas:
 
 src/
+
   ├── components/      # Componentes React
+  
   ├── services/        # Serviços (requisições API, etc.)
+
 ├── App.jsx          # Componente principal
+
 └── main.jsx         # Ponto de entrada do React
 
