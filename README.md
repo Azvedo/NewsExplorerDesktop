@@ -30,6 +30,7 @@ Antes de rodar a aplicação localmente, você precisará ter instalado:
 Clone o repositório para sua máquina local:
 
   git clone [https://github.com/seu-usuario/news-explorer.git](https://github.com/Azvedo/NewsExplorerDesktop.git)
+  
   cd news-explorer
 
 ### Instale as dependências:
