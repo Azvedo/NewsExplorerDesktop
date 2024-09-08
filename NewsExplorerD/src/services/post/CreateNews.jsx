@@ -53,6 +53,7 @@ async function createNewsPost(newsData) {
 
     // Publica a entrada criada
     await newEntry.publish();
+    alert('Notícia criada com sucesso');
     console.log('Notícia criada com sucesso:', newEntry);
   } catch (error) {
     alert('Erro ao criar a notícia. Tente novamente');

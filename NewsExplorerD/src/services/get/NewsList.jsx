@@ -25,25 +25,25 @@ const NewsList = () => {
       space : "gft2mzhd30x8", 
       accessToken : "9RF2BRJwt6gio9R9xF7J0KqdPeJGMeHkm17VqnyXo24" 
     });
+
     const fetchNews = async () => {
       try {
-        const entries = await client.getEntries({
-          content_type: 'menuInterface', //tipo do conteúdo (necessário para buscar as notícias na contentful api)
-          skip: (page - 1) * 10, // Pula os itens já carregados
-          limit: 10 // Limite de itens por página
-        });
-        setTimeout(() => {
-          setNews(prevNews => [...prevNews, ...entries.items.filter(item => !prevNews.some(newsItem => newsItem.sys.id === item.sys.id))]); // Adiciona as notícias ao array sem repetir as que já foram carregadas
-          if (entries.items.length < 10) {
-            setHasMore(false); // Se houver menos de 10 itens, não há mais para carregar
-          }
-        }, 1000);
+          const entries = await client.getEntries({
+            content_type: 'menuInterface', //tipo do conteúdo (necessário para buscar as notícias na contentful api)
+            limit: page * 10 // Limite de itens por página
+          });
+          setTimeout(() => {
+            setNews(entries.items); // Adiciona as notícias ao array
+            if (entries.items.length < (page * 10)) {
+              setHasMore(false); // Se houver menos de 10 itens, não há mais para carregar
+            }
+          }, 1000);
       } catch (error) {
         console.error("Erro ao buscar notícias: ", error);
       }
     };
     fetchNews();
-  }, [news,page]); // Atualiza o componente toda vez que a página ou o array de notícias mudar
+  }, [news , page]); // Executa o useEffect toda vez que a página ou o array de notícias mudar
 
 
   return (
