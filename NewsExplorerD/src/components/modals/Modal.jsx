@@ -21,7 +21,12 @@ const Modal = ({ toggleModal }) => {
         content
       };
       // Chama a função para criar a notícia
-      await createNewsPost(newsData);
+      if(title === '' || image  === '' || summary === '' || createdDate === '' || author === '' || content === ''){
+        alert("Preencha todos os campos");
+        return;
+      }else{
+        await createNewsPost(newsData);
+      }
       // Limpa os campos após o envio
       setTitle('');
       setImage('');

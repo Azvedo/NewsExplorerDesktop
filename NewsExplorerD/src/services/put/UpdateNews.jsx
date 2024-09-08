@@ -1,5 +1,5 @@
 import { createClient } from 'contentful-management';
-import uploadImage from './UploadImage';
+import uploadImage from '../post/UploadImage';
 
 // Inicializando o cliente do Contentful
 const client = createClient({
@@ -25,6 +25,10 @@ async function updateNewsPost(id, updatedData) {
         if(updatedData.image){
           //Para atualizar a imagem é necessário fazer o upload da nova imagem e atualizar o link da imagem na notícia
           const imageId = await uploadImage(updatedData.image);
+          if (!imageId) {
+            alert('Erro ao fazer o upload da imagem. Verifique o (URL ou caminho) e tente novamente');
+            return;
+          }
           entry.fields.image['en-US'] = {
               sys: {
                 type: 'Link',

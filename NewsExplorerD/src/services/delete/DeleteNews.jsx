@@ -21,6 +21,7 @@ async function deleteNewsPost(id) {
         }
 
         await entry.delete();
+        alert('Notícia deletada com sucesso');
         console.log('Notícia deletada com sucesso:', entry);    
     }
     catch(error){

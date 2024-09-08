@@ -43,7 +43,7 @@ const NewsList = () => {
       }
     };
     fetchNews();
-  }, [page]); // Atualiza o componente toda vez que a página ou o array de notícias mudar
+  }, [news,page]); // Atualiza o componente toda vez que a página ou o array de notícias mudar
 
 
   return (
