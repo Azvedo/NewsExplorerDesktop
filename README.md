@@ -4,8 +4,11 @@ NewsExplorer é uma aplicação web que permite aos usuários criar, editar e ex
 
 ### Funcionalidades:
   •  Criação de Notícias: Permite que os usuários criem novas notícias diretamente pela interface.
+  
   •  Edição de Notícias: Usuários podem editar as notícias .
+  
   •  Exclusão de Notícias: Permite a remoção de notícias da aplicação.
+  
   •  Integração com a Contentful API: Toda a criação, edição e exclusão de conteúdos é feita utilizando a Contentful API, permitindo um gerenciamento eficiente e flexível.
 
 ### Tecnologias Utilizadas:
