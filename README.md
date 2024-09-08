@@ -29,17 +29,20 @@ Antes de rodar a aplicação localmente, você precisará ter instalado:
 
 Clone o repositório para sua máquina local:
 
-  git clone [https://github.com/seu-usuario/news-explorer.git](https://github.com/Azvedo/NewsExplorerDesktop.git)
+    git clone [https://github.com/seu-usuario/news-explorer.git](https://github.com/Azvedo/NewsExplorerDesktop.git)
   
-  cd news-explorer
+    cd newsexplorerdesktop
+    cd newsexplorerd
 
 ### Instale as dependências:
-  npm install
+    npm install
 
 ### Como Rodar a Aplicação:
 
   Inicie o servidor de desenvolvimento:
+  
     npm run dev
+    
   Acesse a aplicação no navegador:
     http://localhost:3000
 
@@ -47,11 +50,11 @@ Clone o repositório para sua máquina local:
 
 src/
 
-    ├── components/      # Componentes React
+   ├── components/      # Componentes React
   
-    ├── services/        # Serviços (requisições API, etc.)
+   ├── services/        # Serviços (requisições API, etc.)
 
-├── App.jsx          # Componente principal
+ ├── App.jsx          # Componente principal
 
-└── main.jsx         # Ponto de entrada do React
+ └── main.jsx         # Ponto de entrada do React
 
