@@ -39,3 +39,28 @@
 .write_mynews_button:hover{
   opacity: 0.6;
 }
+
+
+@media screen and (max-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: space-around;
+    gap: 90px;
+
+    & img {
+      width: 100px;
+      height: 70px;
+    }
+  }
+
+  .write_mynews{
+    display: flex;
+    position: relative;
+    width: 80px;
+    height: 40px;
+  }
+  
+  .write_mynews_button{
+    font-size: 12px;
+  }
+}

@@ -23,6 +23,7 @@
     align-items: center;
 }   
 .card_title {
+    max-width: 94%;
     font-size: 24px;
     font-weight: 700;
     color: #ffffff;
@@ -99,4 +100,29 @@ label{
 
 input[type="checkbox"]:checked + label + .card_options{
     display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        width: 52%;
+    }
+
+    .card_title {
+        max-width: 86%;
+        font-size: 12px;
+        font-weight: 700;
+        color: #ffffff;
+        margin-bottom: 12px;
+    }
+
+    .card_info {
+        margin-top: 12px;
+        width: 100%;
+        
+        & p{
+            font-size: 14px;
+            padding: 8px;
+        }
+    }
+    
 }

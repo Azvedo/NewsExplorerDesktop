@@ -5,9 +5,10 @@ import Modal from "../modals/Modal";
 export function Header() {
   
   const [isModalVisible, setIsModalVisible] = useState(false);
-
+ 
+  // Função para abrir e fechar o modal(criar notícia)
   const toggleModal = () => {
-    setIsModalVisible(!isModalVisible);
+    setIsModalVisible(!isModalVisible); //muda o estado do modal
   };
   
   return (
@@ -25,7 +26,7 @@ export function Header() {
 
       {isModalVisible && (
         <Modal toggleModal={toggleModal} />
-      )};
+      )}
     </>
   );
 }
